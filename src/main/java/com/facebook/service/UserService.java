@@ -6,6 +6,7 @@ import com.facebook.exception.FbTechnicalException;
 import com.facebook.exception.FbWrongCredentialsException;
 import com.facebook.model.User;
 
+import java.io.IOException;
 import java.util.List;
 
 public class UserService {
@@ -22,7 +23,7 @@ public class UserService {
         throw new FbWrongCredentialsException();
     }
 
-    public void signUp(String email, String password) throws FacebookException{
+    public void signUp(String email, String password) throws FacebookException, IOException {
             User user = new User(email, password);
             userDAO.writeUser(user);
     }

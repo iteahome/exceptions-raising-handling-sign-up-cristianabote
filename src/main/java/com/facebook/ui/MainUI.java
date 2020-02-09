@@ -2,6 +2,8 @@ package com.facebook.ui;
 
 import sun.rmi.runtime.Log;
 
+import java.io.IOException;
+
 public class MainUI {
 
     private LoginUI loginUI = new LoginUI();
@@ -9,7 +11,7 @@ public class MainUI {
 
 //    private SignUpUI signUpUI
 
-    public void start() {
+    public void start() throws IOException {
        // loginUI.displayLogin();
         signUpUI.displaySignUp();
     }

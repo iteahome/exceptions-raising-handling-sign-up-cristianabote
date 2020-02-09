@@ -5,9 +5,7 @@ import com.facebook.exception.FbFileException;
 import com.facebook.exception.FbTechnicalException;
 import com.facebook.model.User;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -34,8 +32,14 @@ public class UserDAO {
 
         return userList;
     }
-    public void writeUser(User newUser)throws FbTechnicalException{
-        System.out.println("scriu in fisier user nou:"+newUser.getEmail()+";"+newUser.getPassword());
+    public void writeUser(User newUser) throws FbTechnicalException, IOException {
+        System.out.println("user nou:" + newUser.getEmail() + ";" + newUser.getPassword());
+        Writer outputStream = null;
+
+            outputStream = new BufferedWriter(new FileWriter("c:\\JAVA\\proiecte\\exceptions-raising-handling-sign-up-cristianabote\\src\\main\\java\\users.txt",true));
+            outputStream.write(newUser.getEmail() + ";" + newUser.getPassword()+" ");
+            ((BufferedWriter) outputStream).newLine();
+            outputStream.close();
 
     }
 }

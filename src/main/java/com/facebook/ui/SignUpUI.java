@@ -7,6 +7,7 @@ import com.facebook.exception.FbTechnicalException;
 import com.facebook.service.UserService;
 import com.facebook.ui.validator.UserValidator;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class SignUpUI {
@@ -14,7 +15,7 @@ public class SignUpUI {
     private UserService userService = new UserService();
     private UserValidator userValidator=new UserValidator();
 
-    public void displaySignUp() {
+    public void displaySignUp() throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Email: ");
         String email = scanner.nextLine();
