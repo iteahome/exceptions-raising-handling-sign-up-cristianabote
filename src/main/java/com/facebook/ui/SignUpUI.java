@@ -1,9 +1,6 @@
 package com.facebook.ui;
 
-import com.facebook.exception.FacebookException;
-import com.facebook.exception.FbEmailInvalid;
-import com.facebook.exception.FbShortPasswordException;
-import com.facebook.exception.FbTechnicalException;
+import com.facebook.exception.*;
 import com.facebook.service.UserService;
 import com.facebook.ui.validator.UserValidator;
 
@@ -27,6 +24,8 @@ public class SignUpUI {
                 System.out.println("User successfully added");
             } catch (FbShortPasswordException e) {
                 System.out.println("Password is too short");
+            } catch (FbStrongPasswordException e){
+                System.out.println("Password is not strong");
             } catch (FbEmailInvalid e) {
                 System.out.println("Email invalid");
             } catch (FbTechnicalException e) {

@@ -1,3 +1,16 @@
 andrei.mladin@gmail.com;iteahome
 cristiana@gmail.com;abc
-ionut@test.ro;parola12345
+ionut@test.ro;parola1234
+cris@test3;parola12345 
+cris@;Cr1s@ 
+cris@sadas;credit1 
+cri1@;Cristiana 
+cr@;Cristiana 
+cr@;Cristianaa 
+CR@;Cr!st@S 
+cr@;cRISATADF 
+Cr@;Crist!ana 
+CRI@;cr!ST!!@NA 
+Cri@;Crist!@na1 
+Cris@yahoo.com;Cristiana!@1 
+Cri@ya.co;Cristianaa!12 
